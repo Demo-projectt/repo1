@@ -9,26 +9,11 @@ properties([
       upstreamProjects: 'https://github.com/Demo-projectt/repo2.git'
     )])
 
-pipeline {
-    agent any 
-
-    stages {
-        stage('Build') { 
-            steps { 
-                sh 'pwd' 
-            }
-        }
-        stage('Test'){
-            steps {
-                sh 'java -version'
-                
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'ls'
-                sh 'pwd'
-            }
-        }
-    }
+node {
+   stage 'build'
+   echo 'hello boy'
+   stage 'test'
+   echo 'bomb'
+    stage 'deploy'
+    echo 'avengers'
 }
