@@ -8,6 +8,7 @@ properties([
       threshold: 'SUCCESS',
       upstreamProjects: 'https://github.com/Demo-projectt/repo2.git'
     )])
+    ])
 node {
    stage 'build'
    echo 'hello boy'
